@@ -4,68 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eteria</title>
-<link rel="stylesheet" href="<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">">
-<link rel="stylesheet" href="normalize.css">
-<link rel="stylesheet" href="styles.css">
+    <!--css-->
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Preconexión para fuentes Google -->
+    <link href="https://fonts.googleapis.com">
+    <link href="https://fonts.gstatic.com" crossorigin>
+
+    <!--Fuentes de google-->
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Serif+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>ÉTERIA</h1>
+
+    <header class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="#">Inicio</a>
+            <a href="#">Galeria</a>
+            <a href="#">Autores</a>
+            <a href="#">Adefinir</a>
+        </nav>
     </header>
-<div class="logo ">
-   <img src="logo.png" alt="Logo de ÉTERIA">
-</div>
-<div class="nav-bg">
-    <nav class="navegacion-principal contenedor">
-        <a href="#">Inicio</a>
-        <a href="#">Galeria</a>
-        <a href="#">Autores</a>
-        <a href="#">Adefinir</a>
-    </nav>
-</div>
-<section class="contenedor">
-    <h2>Bienvenidos a ÉTERIA</h2>
-    <p> La galería donde el arte se convierte en un reino eterno. Cada obra es un tesoro, cada autor un maestro, y cada visitante un invitado de honor en un palacio digital de inspiración y belleza.</p>
-</section>
 
-<section>
-    <h2>Contáctanos para exponer tus obras</h2>
-    <p>Si eres un artista y deseas mostrar tu trabajo en nuestra galería, no dudes en ponerte en contacto con nosotros. Estamos aquí para ayudarte a compartir tu visión con el mundo.</p>
-<!-- Formulario de contacto -->
-<form class="formulario">
-<fieldset>
-    <legend> Contactanos llenando todos los campos</legend>
-    <div class="contenedor-campos"> 
-    <div class="campo">
-            <label for="Nombre"></label>
-            <input class="input-text" type="text" placeholder="Tu Nombre"/>
-            <input class="input-text" type="text" placeholder="Tu apellido"/>
-        </div>
+     <div class="logo ">
+        <img src="img/logo.png" alt="Logo de ÉTERIA">
+     </div>
 
-        <div class="campo">
-            <label for="Telefono"></label>
-             <input class="input-text" type="tel" placeholder="Tu Telefono"/> 
+
+    <section class="contenedor">
+        <h2>"La galería donde el arte se convierte en un reino eterno"</h2>
+        <h3>Cada obra es un tesoro, cada autor un maestro, y cada visitante un invitado de honor en un palacio digital de inspiración y belleza</h3>
+     </div>
+            <a class="boton" href="#">Descubre más</a>
+     </div>
+    </section>
+
+    <div class="obras">
+        <h4>Obras Destacadas</h4>
+             <img src="img/Elnacimientodevenus.jpeg" alt="El nacimiento de Venus de Botticelli">
+             <img src= "img/Elcolumpio.jpeg" alt="El jardín de las delicias de El Bosco">
+             <img src="img/labalsadelamedusa.jpeg" alt="La balsa de la Medusa de Théodore Géricault">
     </div>
 
-    <div class="campo">
-        <label for= "correo"></label>
-        <input class="input-text" type="email" placeholder="Tu Email"/>
-    </div>
+     <div class="autores">
+        <img src="img/SandroBotticelli.jpeg" alt="SandroBotticelli">
+        <img src="img/JeanHonoréFragonard.jpeg" alt="JeanHonoréFragonard">
+        <img src="img/ThéodoreGéricault.jpeg" alt="TheodoreGéricault">   
+     </div>
 
-        <div class="campo">
-            <label for="Mensaje"></label>
-         <textarea  class="input-text" placeholder="Tu Mensaje"></textarea>
-        </div>
-    </div>  <!--contenedor de campos-->
-        <div class=" alinear-derecha flex">
-            <input class="boton w-100" type="submit" value="Enviar"/>
-        </div>
-    </fieldset>
-    </form>  
-    <footer class="footer">
-    <p>Todos los derechos reservados. Bojanovich Hannah</p>
-</footer>
+    <section>
+        <h6>Contáctanos para exponer tus obras</h6>
+        <p>Si eres un artista y deseas mostrar tu trabajo en nuestra galería, no dudes en ponerte en contacto con nosotros. Estamos aquí para ayudarte a compartir tu visión con el mundo.</p>
+
+<!--Formulario de contacto -->
+    <form class="formulario">
+        <fieldset>
+            <legend> Contactanos llenando todos los campos</legend>
+            <div class="contenedor-campos"> 
+                <div class="campo">
+                     <label for="Nombre"></label>
+                     <input class="input-text" type="text" placeholder="Tu Nombre"/>
+                     <input class="input-text" type="text" placeholder="Tu apellido"/>
+                </div>
+
+                <div class="campo">
+                    <label for="Telefono"></label>
+                    <input class="input-text" type="tel" placeholder="Tu Telefono"/> 
+                </div>
+
+                <div class="campo">
+                    <label for= "correo"></label>
+                    <input class="input-text" type="email" placeholder="Tu Email"/>
+                </div>
+
+                <div class="campo">
+                    <label for="Mensaje"></label>
+                    <textarea class="input-text" placeholder="Tu Mensaje"></textarea>
+                </div> <!--contenedor de campos-->
+
+                <div class=" alinear-derecha flex">
+                    <input class="boton w-100" type="submit" value="Enviar"/>
+                </div>
+            </fieldset>
+        </form>  
+
+        <footer class="footer">
+             <p>Todos los derechos reservados. Bojanovich Hannah</p>
+        </footer>
+    </section>
 </body>
 </html>

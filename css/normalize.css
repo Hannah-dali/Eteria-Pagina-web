@@ -222,7 +222,7 @@
     outline: 1px dotted ButtonText;
   }
   
-  /**
+  /*
    * Correct the padding in Firefox.
    */
   
@@ -244,6 +244,7 @@
     max-width: 100%; /* 1 */
     padding: 0; /* 3 */
     white-space: normal; /* 1 */
+    
   }
   
   /**

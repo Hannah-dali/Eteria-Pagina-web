@@ -7,6 +7,8 @@
     <!--css-->
     <link rel="preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav-bg.css">
+    <link rel="stylesheet" href="css/formulario.css">
 
     <!-- Preconexión para fuentes Google -->
     <link href="https://fonts.googleapis.com">
@@ -20,9 +22,9 @@
 
     <header class="nav-bg">
         <nav class="navegacion-principal contenedor">
-            <a href="#">Inicio</a>
-            <a href="#">Galeria</a>
-            <a href="#">Autores</a>
+            <a href="/">Inicio</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="autores.html">Autores</a>
             <a href="#">Adefinir</a>
         </nav>
     </header>
@@ -33,65 +35,86 @@
 
 
     <section class="contenedor">
-        <h2>"La galería donde el arte se convierte en un reino eterno"</h2>
-        <h3>Cada obra es un tesoro, cada autor un maestro, y cada visitante un invitado de honor en un palacio digital de inspiración y belleza</h3>
-     </div>
+        <h1>"La galería donde el arte se convierte en un reino eterno"</h1>
+        <p>Cada obra es un tesoro, cada autor un maestro, y cada visitante un invitado de honor en un palacio digital de inspiración y belleza</p>
+         </div>
             <a class="boton" href="#">Descubre más</a>
-     </div>
+         </div>
     </section>
 
     <div class="obras">
-        <h4>Obras Destacadas</h4>
-             <img src="img/Elnacimientodevenus.jpeg" alt="El nacimiento de Venus de Botticelli">
-             <img src= "img/Elcolumpio.jpeg" alt="El jardín de las delicias de El Bosco">
-             <img src="img/labalsadelamedusa.jpeg" alt="La balsa de la Medusa de Théodore Géricault">
+        <h2>Obras Destacadas</h2>
+            <h3>El nacimiento de Venus</h3>
+            <h3>El columpio </h3>
+            <h3>La balsa de la Medusa</h3>
+             <img src="img/obras/Elnacimientodevenus.jpeg" alt="El nacimiento de Venus de Botticelli">
+             <img src= "img/obras/Elcolumpio.jpeg" alt="El jardín de las delicias de El Bosco">
+             <img src="img/obras/labalsadelamedusa.jpeg" alt="La balsa de la Medusa de Théodore Géricault">
+            <p>Esta obra del Renacimiento italiano representa el nacimiento de la diosa Venus, símbolo de la belleza y la perfección ideal. Refleja la influencia del humanismo y la admiración por la mitología clásica, destacando armonía, proporción y elegancia en sus figuras.</p>
+            <p>Pintura emblemática del Rococó, muestra la vida aristocrática francesa del siglo XVIII, con un enfoque en la diversión, la sensualidad y la ligereza. Sus colores suaves y composición dinámica transmiten alegría y frivolidad, características del estilo.</p>
+            <p>Ejemplo del Romanticismo, retrata la tragedia del naufragio de la fragata Medusa. Con un realismo dramático, Géricault expresa el sufrimiento humano y la desesperación, generando un fuerte impacto emocional y social en el espectador.</p>
+    
     </div>
 
      <div class="autores">
-        <img src="img/SandroBotticelli.jpeg" alt="SandroBotticelli">
-        <img src="img/JeanHonoréFragonard.jpeg" alt="JeanHonoréFragonard">
-        <img src="img/ThéodoreGéricault.jpeg" alt="TheodoreGéricault">   
-     </div>
+            <h2>Autores</h2>
+                <img src="img/autores/SandroBotticelli.jpeg" alt="SandroBotticelli">
+                <img src="img/autores/JeanHonoréFragonard.jpeg" alt="JeanHonoréFragonard">
+                <img src="img/autores/ThéodoreGéricault.jpeg" alt="TheodoreGéricault">  
+            <h3>Sandro Botticelli</h3>
+            <h3>Jean-Honoré Fragonard</h3>
+            <h3>Théodore Géricault</h3>
+    </div>
 
     <section>
-        <h6>Contáctanos para exponer tus obras</h6>
-        <p>Si eres un artista y deseas mostrar tu trabajo en nuestra galería, no dudes en ponerte en contacto con nosotros. Estamos aquí para ayudarte a compartir tu visión con el mundo.</p>
+        <h2>Contáctanos para exponer tus obras</h2>
+        <p>Si eres un artista y deseas mostrar tu trabajo en nuestra galería, no dudes en ponerte en contacto con nosotras. Estamos aquí para ayudarte a compartir tu visión con el mundo.</p>
+    </section>
 
 <!--Formulario de contacto -->
+<div class="contenedorformulario">
     <form class="formulario">
-        <fieldset>
-            <legend> Contactanos llenando todos los campos</legend>
-            <div class="contenedor-campos"> 
+            <legend>Contáctanos</legend>
+            <div class="contenedor-campos">
+                <!-- Nombre y Apellido en la misma fila -->
+                <div class="campo-doble">
+                    <div class="campo">
+                        <label for="nombre">Nombre</label>
+                        <input class="input-text" id="nombre" type="text" placeholder="Tu Nombre"/>
+                    </div>
+
+                    <div class="campo">
+                        <label for="apellido">Apellido</label>
+                        <input class="input-text" id="apellido" type="text" placeholder="Tu Apellido"/>
+                    </div>
+                </div>
+
+                <!-- Campos individuales -->
                 <div class="campo">
-                     <label for="Nombre"></label>
-                     <input class="input-text" type="text" placeholder="Tu Nombre"/>
-                     <input class="input-text" type="text" placeholder="Tu apellido"/>
+                    <label for="telefono">Teléfono</label>
+                    <input class="input-text" id="telefono" type="tel" placeholder="Tu Teléfono"/> 
                 </div>
 
                 <div class="campo">
-                    <label for="Telefono"></label>
-                    <input class="input-text" type="tel" placeholder="Tu Telefono"/> 
+                    <label for="correo">Email</label>
+                    <input class="input-text" id="correo" type="email" placeholder="Tu Email"/>
                 </div>
 
                 <div class="campo">
-                    <label for= "correo"></label>
-                    <input class="input-text" type="email" placeholder="Tu Email"/>
+                    <label for="mensaje">Mensaje</label>
+                    <textarea class="input-text" id="mensaje" placeholder="Cuentanos sobre tus obras"></textarea>
                 </div>
+            </div>
 
-                <div class="campo">
-                    <label for="Mensaje"></label>
-                    <textarea class="input-text" placeholder="Tu Mensaje"></textarea>
-                </div> <!--contenedor de campos-->
-
-                <div class=" alinear-derecha flex">
-                    <input class="boton w-100" type="submit" value="Enviar"/>
-                </div>
-            </fieldset>
-        </form>  
-
-        <footer class="footer">
-             <p>Todos los derechos reservados. Bojanovich Hannah</p>
-        </footer>
-    </section>
+            <div class="alinear-derecha">
+                <input class="boton2" type="submit" value="Enviar"/>
+            </div>
+     
+    </form>
+</div>
+<footer class="footer">
+    <p>Todos los derechos reservados. Bojanovich Hannah</p>
+</footer>
+</section>
 </body>
 </html>

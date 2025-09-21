@@ -139,6 +139,6 @@ body {
     rgba(255, 160, 80, 0.1) 70%,
     transparent 95%
   );
-  z-index: 2  git status  git status;
+  z-index: 2;
   pointer-events: none;
 }

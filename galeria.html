@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>autor</title>
+    <title>Galería de Vincent van Gogh</title>
     <!--css-->
     <link rel="preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" href="css/nav-bg.css">
     <link rel="stylesheet" href="css/galeria.css">
     <script src="js/mostrarinfo.js"></script>
+</head>
 
+<body>
   <header class="nav-bg">
         <nav class="navegacion-principal contenedor">
             <a href="/">Inicio</a>
@@ -18,82 +20,41 @@
             <a href="#">Adefinir</a>
         </nav>
     </header>
-<h1 style="text-align:center;">Listado de Cuadros</h1>
-
-<div class="galeria">
-    <div class="cuadro" onclick="irADescripcion('descripcion1')">
-        <div id="descripcion1" class="descripcion"></div>
-        <img class="galeria-imagen" src="img/obras/Lalibertadguiandoalpueblo.jpeg" alt="La Libertad guiando al pueblo">
-        <h2>La Libertad guiando al pueblo</h2>
-        <p>Eugène Delacroix</p>
-        <span>1830</span>
-    </div>
-
-    <div class="cuadro" onclick="irADescripcion('descripcion2')">
-         <div id="descripcion2" class="descripcion"></div>
-        <img class="galeria-imagen" src="img/obras/Elnacimientodevenus.jpeg" alt="El nacimiento de Venus">
-        <h2>El nacimiento de Venus</h2>
-        <p>Sandro Botticelli</p>
-        <span>1485</span>
-    </div>
-
-    <div class="cuadro" onclick="irADescripcion('descripcion3')">
-        <div id="descripcion3" class="descripcion"></div>
-        <img class="galeria-imagen" src="img/obras/labalsadelamedusa.jpeg" alt="La balsa de la Medusa">
-        <h2>La balsa de la Medusa</h2>
-        <p>Théodore Géricault</p>
-        <span>1818–1819</span>
-    </div>
-
-    <div class="cuadro" onclick="irADescripcion('descripcion4')">
-        <div id="descripcion4" class="descripcion"></div>
-        <img class="galeria-imagen" src="img/obras/Elcaminantesobreelmardenubes.jpeg" alt="El caminante sobre el mar de nubes">
-        <h2>El caminante sobre el mar de nubes</h2>
-        <p>Caspar David Friedrich</p>
-        <span>1818</span>
-    </div>
-
-    <div class="cuadro" onclick="irADescripcion('descripcion5')">
-        <div id="descripcion5" class="descripcion"></div>
-        <img class="galeria-imagen" src="img/obras/Elcolumpio.jpeg" alt="El columpio">
-        <h2>El columpio</h2>
-        <p>Jean-Honoré Fragonard</p>
-        <span>1767</span>
-    </div>
-
-    <div class="cuadro" onclick="irADescripcion('descripcion6')">
-        <div id="descripcion6" class="descripcion"></div>
-        <img class="galeria-imagen" src="img/obras/lajovendelaperla.jpeg" alt="La joven de la perla">
-        <h2>La joven de la perla</h2>
-        <p>Johannes Vermeer</p>
-        <span>1665</span>
-    </div>
-
-    <div class="cuadro" onclick="irADescripcion('descripcion7')">
-        <div id="descripcion7" class="descripcion"></div>
-        <img class="galeria-imagen" src="img/obras/lapersistenciadelamemoria.jpeg" alt="La persistencia de la memoria">
-        <h2>La persistencia de la memoria</h2>
-        <p>Salvador Dalí</p>
-        <span>1931</span>
-    </div>
-
-    <div class="cuadro" onclick="irADescripcion('descripcion8')">
-        <div id="descripcion8" class="descripcion"></div>
-        <img class="galeria-imagen" src="img/obras/Monalisa.jpeg" alt="La Gioconda">
-        <h2>La Gioconda</h2>
-        <p>Leonardo da Vinci</p>
-        <span>1503–1506</span>
-    </div>
-
-
-    <div class="cuadro" onclick="irADescripcion('descripcion9')">
-        <div id="descripcion9" class="descripcion"></div>
-        <img class="galeria-imagen" src="img/obras/elhijodelhombre.jpeg" alt="El hijo del hombre">
-        <h2>El hijo del hombre</h2>
-        <p>René Magritte</p>
-        <span>1964</span>
-    </div>
+<div class="titulo">
+  <h1>Galería de Vincent van Gogh</h1>
 </div>
-     <script src="js/mostrarinfo.js"></script>
+    <div class="banner">
+      <div class="slider" style="--quantity: 9">
+        <div class="item" style="--position: 1">
+          <img src="img/obras/van-gogh/autorretrato.jpeg" alt="Autorretrato de Van Gogh" />
+        </div>
+        <div class="item" style="--position: 2">
+          <img src="img/obras/van-gogh/Caminoconciprésylaestrella.webp" alt="Camino con ciprés y la estrella" />
+        </div>
+        <div class="item" style="--position: 3">
+          <img src="img/obras/van-gogh/Campodetrigoconcipreses.jpeg" alt="Campo de trigo con cipreses" />
+        </div>
+        <div class="item" style="--position: 4">
+          <img src="img/obras/van-gogh/EldoctorPaulGachet.jpeg" alt="El doctor Paul Gachet" />
+        </div>
+        <div class="item" style="--position: 5">
+          <img src="img/obras/van-gogh/girasoles-vangogh.jpeg" alt="Los Girasoles" />
+        </div>
+        <div class="item" style="--position: 6">
+          <img src="img/obras/van-gogh/LaiglesiadeAuvers-sur-Oise.jpeg" alt="La iglesia de Auvers-sur-Oise" />
+        </div>
+        <div class="item" style="--position: 7">
+          <img src="img/obras/van-gogh/NaturalezamuertaVasoconrosas.jpeg" alt="Naturaleza muerta - Vaso con rosas" />
+        </div>
+        <div class="item" style="--position: 8">
+          <img src="img/obras/van-gogh/nocheestrelladadevangogh.jpeg" alt="La noche estrellada" />
+        </div>
+        <div class="item" style="--position: 9">
+          <img src="img/obras/van-gogh/NocheestrelladasobreelRódano.jpeg" alt="Noche estrellada sobre el Ródano" />
+        </div>
+      </div>
+      <div class="spotlight"></div>
+      <div class="model"></div>
+    </div>
 </body>
 </html>

@@ -1,0 +1,170 @@
+/* Variables de color y tipografía */
+:root {
+    --color-principal: #4b3b2a;
+    --color-secundario: #f4ead2;
+    --color-acento: #a67c52;
+    --color-boton: #c49a6c;
+    --fuente-principal: 'Georgia', serif;
+    --fuente-titulo: 'Palatino Linotype', serif;
+    --border-radius: 8px;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --transition-speed: 0.3s;
+}
+
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--fuente-principal);
+    color: var(--color-principal);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+main {
+    flex: 1;
+    margin: var(--spacing-lg) auto;
+    max-width: 1200px;
+    padding: 0 var(--spacing-md);
+}
+
+h1 {
+    color: var(--color-principal);
+    text-align: center;
+    font-family: var(--fuente-titulo);
+    margin-bottom: var(--spacing-lg);
+    font-size: 2.5rem;
+}
+
+/* Estilos de la tabla */
+.tabla-autores {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--spacing-lg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.tabla-autores th {
+    background-color: var(--color-acento);
+    color: var(--color-secundario);
+    text-align: left;
+    padding: var(--spacing-md);
+    font-family: var(--fuente-titulo);
+}
+
+.tabla-autores td {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.tabla-autores tr:nth-child(even) {
+    background-color: var(--color-secundario);
+}
+
+.tabla-autores tr:hover {
+    background-color: var(--color-acento);
+}
+
+/* Estilos de elementos de la tabla */
+.autor-foto {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: var(--spacing-md);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.autor-nombre {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.autor-epoca {
+    color: var(--color-acento);
+    font-style: italic;
+}
+
+.ver-obras {
+    display: inline-block;
+    background-color: var(--color-boton);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color var(--transition-speed);
+}
+
+.ver-obras:hover {
+    background-color: var(--color-principal);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--color-acento);
+    color: var(--color-secundario);
+    text-align: center;
+    padding: 1.5rem 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .tabla-autores, 
+    .tabla-autores thead, 
+    .tabla-autores tbody, 
+    .tabla-autores th, 
+    .tabla-autores td, 
+    .tabla-autores tr {
+        display: block;
+    }
+    
+    .tabla-autores thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    
+    .tabla-autores tr {
+        border: 1px solid #ccc;
+        margin-bottom: var(--spacing-md);
+        border-radius: var(--border-radius);
+        overflow: hidden;
+    }
+    
+    .tabla-autores td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+    
+    .tabla-autores td:before {
+        position: absolute;
+        top: 12px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+    
+    .tabla-autores td:nth-of-type(1):before { content: "Foto"; }
+    .tabla-autores td:nth-of-type(2):before { content: "Nombre"; }
+    .tabla-autores td:nth-of-type(3):before { content: "Época"; }
+    .tabla-autores td:nth-of-type(4):before { content: "Movimiento"; }
+    .tabla-autores td:nth-of-type(5):before { content: "Obras"; }
+    .tabla-autores td:nth-of-type(6):before { content: "Acciones"; }
+}

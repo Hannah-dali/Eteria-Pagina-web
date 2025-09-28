@@ -1,0 +1,73 @@
+
+@media (max-width: 768px) {
+    .obras {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+/* Tablets - Sección Autores */
+@media (max-width: 768px) and (min-width: 481px) {
+    .autores {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        gap: 2rem;
+        padding: 0 2rem;
+    }
+    
+    .autores img {
+        width: 140px;
+        height: 180px;
+    }
+    
+    .autores h3 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Móviles - Sección Autores */
+@media (max-width: 480px) {
+    .autores {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 2rem;
+        padding: 0 1rem;
+        max-width: 100%;
+    }
+    
+    .autores img {
+        width: 130px;
+        height: 170px;
+    }
+    
+    .autores h2 {
+        font-size: 2rem;
+        padding: 1.5rem;
+    }
+    
+    .autores h3 {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Pantallas Grandes - Sección Autores */
+@media (min-width: 1200px) {
+    .autores {
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 4rem;
+        padding: 0 4rem;
+    }
+    
+    .autores img {
+        width: 170px;
+        height: 220px;
+    }
+}

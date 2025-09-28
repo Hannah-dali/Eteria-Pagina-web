@@ -40,14 +40,13 @@ html,body {
    color: var(--color-marron);
     text-align: center;
     font-size: 18px;
-    line-height: 1.6; 
 }
 
 .contenedor h1 {
         font-family: var(--fuente-texto-2);
         font-size: 30px;
         text-align: center;
-        line-height: 1.3; 
+
     }
    .contenedor p {
         font-family: var(--fuente-texto-2);
@@ -60,9 +59,53 @@ html,body {
 .obras {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    padding: 2rem;
     align-items: center;
+}
+.marco-horizontal {
+    border-width: 15px;
+    border: 90px solid;
+    border-image: url(../img/marcos/marco-horizontal.png);
+    border-image-slice:  500 200 500 200 fill;
+    z-index: 2;
+}
+
+.marco-vertical {
+    border: 98px solid;
+    border-image: url(../img/marcos/Marco-vertical.png);
+    border-image-slice: 390 280 470 280 fill;  
+    z-index: 2;
+
+}
+
+.obra-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap : 0;
+}
+
+.obra-item h3 {
+    margin: 0;
+    font-size: 3.2rem;
+    color: var(--color-marronoscuro);
+    font-family: var(--fuente-titulos);
+}
+
+.obra-item p {
+    margin: 0;
+    font-family: var(--fuente-texto-2);
+    font-size: 1.8rem;
+    text-align: justify;
+    color: var(--color-marronoscuro);
+    max-width: 600px;
+}
+
+.obras img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    z-index: 1;
 }
 
 .obras h2 {
@@ -96,30 +139,26 @@ html,body {
     padding: 2rem;
 }
 
-.obras img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-    transition: transform 0.3s ease;
-}
-.obras img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(0,0,0,0.2); }
-
 .autores{
     margin-top: 100px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    padding: 1rem;
-    justify-items: center;}
+    justify-items: center;
+}
 
 
 .autores img {
-    width: 50%;
-    height: auto;
-    border-radius: 98px;
-   
+    width: 250px;
+    height: 270px; 
+    object-fit: cover;
+    border-radius: 70%;
+    margin: 0 auto;
+    display: block;
+    background-image: url('../img/marcos/marco-ovalado.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 5px; 
 }
 .autores h2 {
     font-family: var(--fuente-texto-2);
@@ -138,6 +177,13 @@ html,body {
     text-align: center;
     align-items: center;
     margin-bottom: 4rem;
+}
+.marco-ovalado {
+    border: 17px solid;
+    border-width: 35px;
+    border-image: url(../img/marcos/marco-ovalado.png);
+    border-image-slice: 210 100 210 100 fill;  
+    z-index: 2;
 }
 .boton {
     background-color: var(--color-marroncito);

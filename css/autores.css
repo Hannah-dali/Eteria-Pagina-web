@@ -24,7 +24,7 @@ body {
     flex-direction: column;
 }
 
-.contenedor {
+.contenedor-autores {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--spacing-md);

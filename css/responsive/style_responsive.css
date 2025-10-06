@@ -71,3 +71,84 @@
         height: 220px;
     }
 }
+
+/* Media Queries para Formulario 
+
+/* Tablets - Formulario */
+@media (max-width: 768px) and (min-width: 601px) {
+    .contenedorformulario {
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+    
+    .formulario {
+        max-width: 80%;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+    
+    .campo-doble {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .boton2 {
+        width: auto;
+        min-width: 150px;
+        padding: 1rem 2rem;
+    }
+}
+    @media (min-width: 768px) {
+    .campo-doble {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 1.5rem;
+    }
+    
+    /* Los campos individuales mantienen su diseño normal */
+    .campo {
+        width: 100%;
+    }
+}
+
+/* Móviles - Formulario (incluye 505px) */
+@media (max-width: 600px) {
+    .contenedorformulario {
+        padding: 1rem;
+        text-align: center;
+    }
+    
+    .formulario {
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 1.5rem;
+    }
+    
+    .contenedor-campos {
+        display: flex !important;
+        flex-direction: column !important;
+        grid-template-columns: none !important;
+        grid-template-rows: none !important;
+        gap: 1.5rem !important;
+    }
+    
+    .campo-doble {
+        display: flex !important;
+        flex-direction: column !important;
+        grid-template-columns: none !important;
+        gap: 1.5rem !important;
+    }
+    
+    .campo {
+        width: 100% !important;
+        grid-column: unset !important;
+    }
+    
+    .boton2 {
+        width: auto;
+        min-width: 120px;
+        max-width: 200px;
+        margin: 1rem auto 0 auto;
+        display: block;
+    }
+}

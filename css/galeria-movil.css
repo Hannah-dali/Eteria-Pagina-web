@@ -14,9 +14,11 @@
 }
 
 body {
-    background-color: #291e01 !important;
-    margin: 0;
-    padding: 0;
+  background-color: #291e01 !important;
+  width: 375px;
+  max-width: 100vw;
+  margin: 0 auto;
+  height: auto;
 }
 
 /* Anular estilos de navegación para la página de galería */
@@ -34,29 +36,30 @@ body {
     box-shadow: 0 0 15px var(--color-Doradoreal);
 }
 
-.titulo h1 {
+.titulo-movil h1 {
   font-size: 3rem;
   text-align: center;
-  margin: 0.5rem ;
+
   color: var(--color-marroncito);
   text-shadow:
-     0 0 5px rgba(64, 53, 23, 0.7),
+    0 0 5px rgba(64, 53, 23, 0.7),
     0 0 10px rgba(213, 170, 51, 0.5),
     0 0 15px rgba(200, 167, 78, 0.3),
     0 0 20px rgba(200, 167, 78, 0.2);
   background-color: transparent;
   text-decoration: underline;
 }
-.banner {
-  width: 100%;
-  height: 100vh;
-  text-align: center;
-  overflow: hidden;
-  position: relative;
-  perspective: 1000px;
-  background-color: transparent;
+  .banner-movil {
+    width: 100%;
+    max-width: 100vw;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    perspective: 1000px;
+    background-color: transparent;
 }
-.banner .slider {
+.banner-movil .slider-movil {
   position: absolute;
   width: 200px;
   height: 250px;
@@ -68,40 +71,43 @@ body {
 }
 @keyframes autoRun {
   from {
-    transform: rotateX(-18deg) rotateY(0);
+    transform: rotateX(-11.5deg) rotateY(0);
   }
   to {
     transform: rotateX(-16deg) rotateY(360deg);
   }
 }
-.banner .slider .item {
+.banner-movil .slider-movil .item-movil {
   position: absolute;
   inset: 0 0 0 0;
-  transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(550px);
+  transform: rotateY(calc((var(--position) - 1) * (360/ var(--quantity)) * 1deg)) translateZ(150px);
 }
-.banner .slider .item img {
-  width: 100%;
-  height: 100%;
+.banner-movil .slider-movil .item-movil img {
+  width: 50%;
+  height: 50%;
   object-fit:cover;
 
 }
-.banner .model {
-  background-image: url('../img/obras/van-gogh/vangogh3d.png');
+.model-movil{
+  position: relative;
+  background-position: right ;
   width: 100%;
-  height: 70vh;
+  height: 80vh;
   position: fixed;
-  bottom: 0;
-  left: 0;
+  bottom:0;
+  left:0;
+  z-index: 1;
+}
+.banner-movil .model-movil {
+  background-image: url('../img/obras/van-gogh/vahngohg-movil.png');
   background-size: auto 70vh;
   background-repeat: no-repeat;
-  background-position: center bottom;
-  z-index: 1;
   pointer-events: none;
   filter: brightness(1.2) contrast(1.1);
 }
 
 /* Cono de luz desde arriba - como un reflector real */
-.banner::before {
+.banner-movil::before {
   content: "";
   position: absolute;
   top: 0;
@@ -124,7 +130,7 @@ body {
 }
 
 /* Reflector adicional centrado en el modelo */
-.banner .spotlight {
+.banner-movil .spotlight-movil {
   position: relative;
   top: 0;
   left: 50%;

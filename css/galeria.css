@@ -40,7 +40,7 @@ body {
   margin: 0.5rem ;
   color: var(--color-marroncito);
   text-shadow:
-     0 0 5px rgba(64, 53, 23, 0.7),
+    0 0 5px rgba(64, 53, 23, 0.7),
     0 0 10px rgba(213, 170, 51, 0.5),
     0 0 15px rgba(200, 167, 78, 0.3),
     0 0 20px rgba(200, 167, 78, 0.2);

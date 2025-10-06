@@ -69,4 +69,5 @@ body {
 .nav-bg {
   border: 2px solid var(--color-Doradoreal);
   background-color: var(--color-Blancoperla);
+  margin-top: 1.5rem; /* Espacio arriba del recuadro de navegación */
 }

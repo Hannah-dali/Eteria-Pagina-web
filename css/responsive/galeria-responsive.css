@@ -1,0 +1,211 @@
+/* Media Query para iPad y tamaños similares (768x1024) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .banner .slider {
+    top: 15.5%;
+  }
+
+  .banner .model {
+    background-size: auto 65vh;
+  }
+
+  @keyframes autoRun {
+    from {
+      transform: rotateX(-11deg) rotateY(0);
+    }
+    to {
+      transform: rotateX(-11deg) rotateY(360deg);
+    }
+  }
+}
+
+/* Media Query para dispositivos móviles medianos (338px-767px) */
+@media screen and (min-width: 338px) and (max-width: 767px) {
+  .banner .slider {
+    top: 37.5%;
+  }
+}
+
+/* Media Query para iPhone SE y tamaños similares (máximo 337px) */
+@media screen and (max-width: 337px) {
+  .banner .slider {
+    top: 33.5%;
+  }
+}
+
+/* Estilos comunes para todos los dispositivos móviles */
+@media screen and (max-width: 767px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+    height: auto;
+  }
+
+  .titulo h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--color-marroncito);
+    text-shadow:
+      0 0 5px rgba(64, 53, 23, 0.7),
+      0 0 10px rgba(213, 170, 51, 0.5),
+      0 0 15px rgba(200, 167, 78, 0.3),
+      0 0 20px rgba(200, 167, 78, 0.2);
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  .banner {
+    width: 100%;
+    max-width: 100vw;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    perspective: 1000px;
+    background-color: transparent;
+  }
+
+  /* Ajustes de dimensiones del slider */
+  .banner .slider {
+    position: absolute;
+    width: 130px;
+    height: 180px;
+    left: calc(40% - 100px);
+    transform-style: preserve-3d;
+    animation: autoRun 20s linear infinite;
+    z-index: 2;
+  }
+
+  /* Cambio en la animación - sin rotación en X */
+  @keyframes autoRun {
+    from {
+      transform: rotateY(0);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+
+  /* Reducir el radio del círculo y tamaño de imágenes */
+  .banner .slider .item {
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: rotateY(calc((var(--position) - 1) * (360/ var(--quantity)) * 1deg)) translateZ(100px);
+  }
+
+  .banner .slider .item img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  /* Agregar efectos de hover y touch */
+  .banner .slider .item img:hover,
+  .banner .slider .item img:active,
+  .banner .slider .item img:focus {
+    transform: scale(2.5);
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .banner .slider:has(.item img:hover),
+  .banner .slider:has(.item img:active),
+  .banner .slider:has(.item img:focus) {
+    animation-play-state: paused;
+  }
+  
+  .banner .slider .item:hover,
+  .banner .slider .item:active,
+  .banner .slider .item:focus {
+    z-index: 10;
+  }
+
+  /* Asegurarse de que las imágenes sean interactivas en móviles */
+  .banner .slider .item img {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* Estados táctiles específicos */
+  .banner .slider .item img:focus-visible,
+  .banner .slider .item img:-moz-focusring,
+  .banner .slider .item img.touched {
+    transform: scale(2.5);
+    z-index: 10;
+  }
+
+  @media (hover: none) {
+    .banner .slider .item img:active {
+      transform: scale(2.5);
+      z-index: 10;
+    }
+    
+    .banner .slider:has(.item img:active) {
+      animation-play-state: paused;
+    }
+  }
+
+  /* Cambiar imagen y ajustes del modelo */
+  .banner .model {
+    position: fixed;
+    background-position: right bottom;
+    width: 105%;
+    height: 80vh;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-image: url('../../img/obras/van-gogh/vahngohg-movil.png');
+    background-size: auto 70vh;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    filter: brightness(1.2) contrast(1.1);
+    display: block;
+  }
+
+  /* Cono de luz desde arriba */
+  .banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    height: 100vh;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 220, 150, 0.8) 0%,
+      rgba(255, 200, 120, 0.6) 20%,
+      rgba(255, 180, 100, 0.4) 40%,
+      rgba(255, 160, 80, 0.25) 60%,
+      rgba(255, 140, 60, 0.15) 80%,
+      transparent 100%
+    );
+    clip-path: polygon(40% 0%, 60% 0%, 100% 100%, 0% 100%);
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  /* Reflector adicional centrado */
+  .banner .spotlight {
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    height: 100vh;
+    background: radial-gradient(
+      ellipse 200px 100vh at center top,
+      rgba(255, 220, 150, 0.4) 0%,
+      rgba(255, 200, 120, 0.3) 30%,
+      rgba(255, 180, 100, 0.2) 50%,
+      rgba(255, 160, 80, 0.1) 70%,
+      transparent 95%
+    );
+    z-index: 2;
+    pointer-events: none;
+  }
+}

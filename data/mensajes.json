@@ -1,0 +1,28 @@
+{
+    "mensajes": [
+        {
+            "nombre": "Valentina",
+            "apellido": "Rojas",
+            "telefono": "351 678 2345",
+            "email": "valentina.rojas.art@gmail.com",
+            "mensaje": "\u00a1Hola! Me encantar\u00eda participar en la pr\u00f3xima exposici\u00f3n. Tengo una serie llamada \u201cRa\u00edces del alma\u201d que aborda la relaci\u00f3n entre identidad y entorno natural. \u00bfPodr\u00edan enviarme informaci\u00f3n sobre las fechas y requisitos de participaci\u00f3n?",
+            "fecha": "2025-10-08T00:09:55.092Z"
+        },
+        {
+            "nombre": "Juli\u00e1n",
+            "apellido": "M\u00e9ndez",
+            "telefono": "379 512 9014",
+            "email": "julianmendez.artdigital@gmail.com",
+            "mensaje": "Buenas tardes, tengo una serie de ilustraciones digitales llamada \u201cNeoMemorias\u201d que me gustar\u00eda mostrar en formato impreso y digital. \u00bfAceptan obras proyectadas en pantallas?\n\nSoy ilustrador digital. Mis trabajos mezclan elementos futuristas con est\u00e9tica vintage, creando mundos imaginarios llenos de color y simbolismo.",
+            "fecha": "2025-10-08T00:11:07.712Z"
+        },
+        {
+            "nombre": "Daniela",
+            "apellido": "Pineda",
+            "telefono": "381 449 2027",
+            "email": "danielapineda.abstract@gmail.com",
+            "mensaje": "\u00a1Hola! Me interesa participar en una muestra colectiva. Tengo una serie de obras titulada \u201cFragmentos del tiempo\u201d. \u00bfCu\u00e1l es el proceso de selecci\u00f3n para artistas nuevos? Trabajo con \u00f3leo y collage sobre lienzo, enfoc\u00e1ndome en el arte abstracto. Mis composiciones reflejan emociones a trav\u00e9s de formas geom\u00e9tricas y contrastes fuertes.",
+            "fecha": "2025-10-08T00:12:07.981Z"
+        }
+    ]
+}

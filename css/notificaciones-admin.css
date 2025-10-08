@@ -1,0 +1,226 @@
+/* Panel de Notificaciones */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.contenedor-admin {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.panel-notificaciones {
+    background-color: var(--color-Beigecalido);
+    border-radius: 1rem;
+    padding: 3rem;
+    box-shadow: 0 4px 8px rgba(177, 140, 84, 0.1);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 70vh;
+}
+
+/* Encabezado del panel */
+.header-admin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--color-marroncito);
+}
+
+.header-admin h2 {
+    color: var(--color-marronoscuro);
+    font-family: var(--fuente-titulos);
+    font-size: 2.8rem;
+    margin: 0;
+}
+
+.limpiar-notificaciones {
+    background-color: var(--color-marroncito);
+    color: white;
+    font-family: var(--fuente-titulos);
+    font-size: 1.4rem;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.limpiar-notificaciones:hover {
+    background-color: var(--color-marronoscuro);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(89, 65, 5, 0.2);
+}
+
+/* Filtros */
+.filtros {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.campo-busqueda,
+.selector-filtro {
+    padding: 1rem;
+    border: 1px solid var(--color-marroncito);
+    border-radius: 0.5rem;
+    background-color: var(--color-Blancoperla);
+    font-size: 1.6rem;
+    font-family: var(--fuente-texto);
+    color: var(--color-marronoscuro);
+    outline: none;
+}
+
+.campo-busqueda {
+    flex: 1;
+}
+
+.selector-filtro {
+    min-width: 15rem;
+}
+
+/* Lista de Notificaciones */
+.lista-notificaciones {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex: 1;
+}
+
+.no-notificaciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fuente-texto);
+    font-size: 1.8rem;
+    color: var(--color-marronoscuro);
+    text-align: center;
+    padding: 4rem;
+    flex: 1;
+}
+
+.notificacion {
+    background-color: var(--color-Blancoperla);
+    border-radius: 0.8rem;
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    margin-bottom: 2rem;
+}
+
+.notificacion:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(177, 140, 84, 0.2);
+    border-color: var(--color-marroncito);
+    background-color: var(--color-Beigeclaro);
+}
+
+.notificacion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--color-marroncito);
+}
+
+.notificacion-header h3 {
+    color: var(--color-marronoscuro);
+    font-family: var(--fuente-titulos);
+    font-size: 2rem;
+    margin: 0;
+}
+
+.notificacion-fecha {
+    color: var(--color-marroncito);
+    font-size: 1.4rem;
+    font-family: var(--fuente-texto);
+}
+
+.notificacion-contacto {
+    display: flex;
+    gap: 3rem;
+    margin: 1.5rem 0;
+}
+
+.notificacion-contacto span {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.4rem;
+}
+
+.notificacion-contacto i {
+    color: var(--color-marroncito);
+    font-size: 1.2rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-marroncito);
+    border-radius: 50%;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.notificacion:hover .notificacion-contacto i {
+    color: var(--color-marron);
+    border-color: var(--color-marron);
+    transform: scale(1.1);
+}
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--color-marronoscuro);
+}
+
+.notificacion-mensaje {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: var(--color-marronoscuro);
+    font-family: var(--fuente-texto);
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+
+/* Botón de cerrar sesión */
+.boton-admin {
+    background-color: var(--color-marroncito);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.boton-admin:hover {
+    background-color: var(--color-marronoscuro);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(89, 65, 5, 0.2);
+}
+
+/* Mensaje de no notificaciones */
+.no-notificaciones {
+    text-align: center;
+    color: var(--color-marroncito);
+    font-size: 1.8rem;
+    font-family: var(--fuente-texto);
+    padding: 3rem;
+    background-color: var(--color-Blancoperla);
+    border-radius: 0.8rem;
+    margin: 2rem 0;
+}

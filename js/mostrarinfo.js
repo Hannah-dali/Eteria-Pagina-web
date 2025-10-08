@@ -28,18 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
             // Crear botón Volver
             const botonVolver = document.createElement('button');
             
-            // Determinar el texto y destino del botón según el origen
-            if (from === 'autores') {
-                botonVolver.textContent = '← Volver a Autores';
-                botonVolver.addEventListener('click', () => {
-                    window.location.href = 'autores.html';
-                });
-            } else {
-                botonVolver.textContent = '← Volver a la Galería';
-                botonVolver.addEventListener('click', () => {
-                    window.location.href = 'galeria.html';
-                });
-            }
+            // Configurar el botón para volver siempre a autores
+            botonVolver.textContent = '← Volver a Autores';
+            botonVolver.addEventListener('click', () => {
+                window.location.href = 'autores.html';
+            });
             
             botonVolver.className = 'boton-volver';
 

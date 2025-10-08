@@ -1,0 +1,218 @@
+/* Estilos para la página de administrador */
+.contenedor-admin {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background-color: var(--color-Beigecalido);
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(177, 140, 84, 0.2);
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid var(--color-marroncito);
+}
+
+.login-container h2 {
+    color: var(--color-marronoscuro);
+    text-align: center;
+    margin-bottom: 3rem;
+    font-family: var(--fuente-titulos);
+    font-size: 2.8rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.login-container h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 2px;
+    background-color: var(--color-marroncito);
+}
+
+.admin-form .campo {
+    margin-bottom: 2rem;
+}
+
+.admin-form label {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: var(--color-marronoscuro);
+    font-weight: bold;
+    font-size: 1.6rem;
+    font-family: var(--fuente-titulos);
+}
+
+.admin-form input[type="text"],
+.admin-form input[type="password"] {
+    width: 100%;
+    padding: 1.2rem;
+    border: 1px solid var(--color-marroncito);
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+    background-color: var(--color-Blancoperla);
+    color: var(--color-marronoscuro);
+    outline: none;
+}
+
+.admin-form input[type="text"]:focus,
+.admin-form input[type="password"]:focus {
+    border-color: var(--color-marron);
+    box-shadow: 0 0 8px rgba(177, 140, 84, 0.3);
+    background-color: white;
+}
+
+.admin-form input[type="text"]:focus,
+.admin-form input[type="password"]:focus {
+    outline: none;
+    border-color: var(--color-marroncito);
+    box-shadow: 0 0 5px rgba(209, 178, 128, 0.5);
+}
+
+.boton-admin {
+    background-color: var(--color-marroncito);
+    color: var(--color-Blancoperla);
+    padding: 1.2rem;
+    border: none;
+    border-radius: 2rem;
+    width: 100%;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--fuente-titulos);
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.boton-admin:hover {
+    background-color: var(--color-marron);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(177, 140, 84, 0.3);
+}
+
+.boton-admin:active {
+    transform: translateY(0);
+}
+
+.mensaje-error {
+    color: #d64045;
+    background-color: rgba(214, 64, 69, 0.1);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    text-align: center;
+    font-family: var(--fuente-texto);
+    display: none;
+}
+
+.mensaje-error.visible {
+    display: block;
+}
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    min-height: 1.2rem;
+    display: none;
+}
+
+.mensaje-error.visible {
+    display: block;
+}
+
+/* Estilos para el panel de notificaciones */
+.panel-notificaciones {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.header-admin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.header-admin h2 {
+    margin: 0;
+}
+
+.filtros {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.campo-busqueda, .selector-filtro {
+    padding: 0.5rem;
+    border: 1px solid #d1b280;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.campo-busqueda {
+    flex-grow: 1;
+}
+
+.selector-filtro {
+    width: 150px;
+}
+
+.lista-notificaciones {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.notificacion {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid var(--color-marroncito);
+}
+
+.notificacion-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.notificacion-fecha {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.notificacion-contenido {
+    margin-bottom: 1rem;
+}
+
+.notificacion-mensaje {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+}
+
+.notificacion-contacto {
+    display: flex;
+    gap: 2rem;
+    font-size: 0.9rem;
+    color: #666;
+}

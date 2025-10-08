@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador - Eteria</title>
+    <!--css-->
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav-bg.css">
+    <link rel="stylesheet" href="css/admin.css">
+    
+    <!-- Preconexión para fuentes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+    <!--Fuentes de google-->
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Serif+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="index.html" onclick="cerrarSesion()">Inicio</a>
+            <a href="galeria.html" onclick="cerrarSesion()">Galeria</a>
+            <a href="autores.html" onclick="cerrarSesion()">Autores</a>
+            <a href="Administrador.html">Administrador</a>
+        </nav>
+    </header>
+    
+    <script>
+        function cerrarSesion() {
+            localStorage.removeItem('adminLoggedIn');
+        }
+    </script>
+
+    <main class="contenedor-admin">
+        <div class="login-container">
+            <h2>Acceso Administrador</h2>
+            <form id="loginForm" class="admin-form">
+                <div class="campo">
+                    <label for="username">Usuario:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                
+                <div class="campo">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <div class="mensaje-error" id="error-mensaje"></div>
+                
+                <div class="campo-submit">
+                    <input type="submit" value="Iniciar Sesión" class="boton-admin">
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Todos los derechos reservados. Bojanovich Hannah</p>
+    </footer>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

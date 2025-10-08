@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eteria</title>
     <!--css-->
-    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="preload" href="css/normalize.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/nav-bg.css">
-    <link rel="stylesheet" href="css/formulario.css">
     <link rel="stylesheet" href="css/responsive/style_responsive.css">
     
     <!-- Preconexión para fuentes Google -->
@@ -26,7 +25,7 @@
             <a href="/">Inicio</a>
             <a href="galeria.html">Galeria</a>
             <a href="autores.html">Autores</a>
-            <a href="galeria-movil.html">movil</a>
+            <a href="Administrador.html">Administrador</a>
         </nav>
     </header>
     
@@ -96,56 +95,61 @@
     </div>
 </div>
 
-<section>
+<section class="seccion-contacto">
     <h2>Contáctanos para exponer tus obras</h2>
     <p>Si eres un artista y deseas mostrar tu trabajo en nuestra galería, no dudes en ponerte en contacto con nosotros. Estamos aquí para ayudarte a compartir tu visión con el mundo.</p>
-</section>
 
-<!--Formulario de contacto -->
-<div class="contenedorformulario">
-    <form class="formulario">
-        <legend>Contáctanos</legend>
-        <div class="contenedor-campos">
-            <!-- Nombre y Apellido en la misma fila -->
-            <div class="campo-doble">
+    <!--Formulario de contacto -->
+    <div class="contenedorformulario">
+        <form class="formulario" id="formularioContacto" onsubmit="return false;">
+            <legend>Contáctanos</legend>
+            <div class="contenedor-campos">
+                <!-- Nombre y Apellido en la misma fila -->
+                <div class="campo-doble">
+                    <div class="campo">
+                        <label for="nombre">Nombre</label>
+                        <input class="input-text" id="nombre" name="nombre" type="text" placeholder="Tu Nombre" required/>
+                    </div>
+                    
+                    <div class="campo">
+                        <label for="apellido">Apellido</label>
+                        <input class="input-text" id="apellido" name="apellido" type="text" placeholder="Tu Apellido" required/>
+                    </div>
+                </div>
+                
+                <!-- Campos individuales -->
                 <div class="campo">
-                    <label for="nombre">Nombre</label>
-                    <input class="input-text" id="nombre" type="text" placeholder="Tu Nombre"/>
+                    <label for="telefono">Teléfono</label>
+                    <input class="input-text" id="telefono" name="telefono" type="tel" placeholder="Tu Teléfono" required/> 
                 </div>
                 
                 <div class="campo">
-                    <label for="apellido">Apellido</label>
-                    <input class="input-text" id="apellido" type="text" placeholder="Tu Apellido"/>
+                    <label for="correo">Email</label>
+                    <input class="input-text" id="correo" name="correo" type="email" placeholder="Tu Email" required/>
+                </div>
+                
+                <div class="campo">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea class="input-text" id="mensaje" name="mensaje" placeholder="Cuentanos sobre tus obras" required></textarea>
                 </div>
             </div>
             
-            <!-- Campos individuales -->
-            <div class="campo">
-                <label for="telefono">Teléfono</label>
-                <input class="input-text" id="telefono" type="tel" placeholder="Tu Teléfono"/> 
+            <div class="alinear-derecha">
+                <input class="boton2" type="submit" value="Enviar"/>
             </div>
-            
-            <div class="campo">
-                <label for="correo">Email</label>
-                <input class="input-text" id="correo" type="email" placeholder="Tu Email"/>
+
+            <div id="mensajeExito" class="mensaje-exito" style="display: none;">
+                ¡Mensaje enviado con éxito!
             </div>
-            
-            <div class="campo">
-                <label for="mensaje">Mensaje</label>
-                <textarea class="input-text" id="mensaje" placeholder="Cuentanos sobre tus obras"></textarea>
-            </div>
-        </div>
-        
-        <div class="alinear-derecha">
-            <input class="boton2" type="submit" value="Enviar"/>
-        </div>
-        
-    </form>
-</div>
+        </form>
+    </div>
+</section>
+
 <footer class="footer">
     <p>Todos los derechos reservados. Bojanovich Hannah</p>
 </footer>
-</section>
-   
+
+<!-- Scripts -->
+<script src="js/formulario.js"></script>   
 </body>
 </html>

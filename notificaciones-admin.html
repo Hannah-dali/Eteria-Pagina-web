@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificaciones - Eteria</title>
+    <!--css-->
+    <link rel="preload" href="css/normalize.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav-bg.css">
+    <link rel="stylesheet" href="css/notificaciones-admin.css">
+    
+    <!-- Preconexión para fuentes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+    <!--Fuentes de google-->
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Serif+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="index.html" onclick="cerrarSesion()">Inicio</a>
+            <a href="galeria.html" onclick="cerrarSesion()">Galeria</a>
+            <a href="autores.html" onclick="cerrarSesion()">Autores</a>
+            <a href="Administrador.html">Administrador</a>
+        </nav>
+    </header>
+    
+    <script>
+        function cerrarSesion() {
+            localStorage.removeItem('adminLoggedIn');
+        }
+    </script>
+
+    <main class="contenedor-admin">
+        <div class="panel-notificaciones">
+            <div class="header-admin">
+                <h2>Panel de Notificaciones</h2>
+                <div>
+                    <button id="limpiarNotificaciones" class="limpiar-notificaciones">Limpiar Notificaciones</button>
+                    <button id="cerrarSesion" class="boton-admin">Cerrar Sesión</button>
+                </div>
+            </div>
+
+            <div class="filtros">
+                <input type="text" id="buscarNotificacion" placeholder="Buscar en mensajes..." class="campo-busqueda">
+                <select id="filtroFecha" class="selector-filtro">
+                    <option value="todos">Todas las fechas</option>
+                    <option value="hoy">Hoy</option>
+                    <option value="semana">Esta semana</option>
+                    <option value="mes">Este mes</option>
+                </select>
+            </div>
+
+            <div id="listaNotificaciones" class="lista-notificaciones">
+                <!-- Las notificaciones se cargarán aquí dinámicamente -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Todos los derechos reservados. Bojanovich Hannah</p>
+    </footer>
+
+    <script src="js/admin.js"></script>
+    <script src="js/notificaciones.js"></script>
+</body>
+</html>

@@ -254,3 +254,98 @@ section p {
         text-align: center;
     }
 
+/*formulario*/
+
+.contenedorformulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+/* Formulario */
+.formulario {
+    background-color: var(--color-Beigecalido);
+    width: min(60rem, 100%);
+    padding: 2rem;
+    border-radius: 1rem;
+   
+  
+}
+
+/* Título del formulario */
+.formulario legend {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-marronoscuro);
+    margin-bottom: 3rem;
+    
+}
+
+/* Contenedor de los campos */
+.contenedor-campos {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Campos dobles (nombre/apellido en fila) */
+.campo-doble {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    width: 100%;
+}
+
+/* Cada campo */
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 100%;
+}
+
+/* Etiquetas */
+.campo label {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--color-marronoscuro);
+}
+
+/* Inputs y textarea */
+.input-text {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--color-Blancoperla);
+    border: 1px solid var(--color-Beigeclaro);
+    font-size: 1.4rem;
+    outline: none; 
+}
+.input-text::placeholder {
+    color: var(--color-marroncito);
+}
+
+textarea.input-text {
+    min-height: 12rem;
+}
+
+/* Botón */
+.alinear-derecha {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.boton2 {
+    background-color: var(--color-marroncito);
+    color: white;
+    padding: 1rem 20rem;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+}

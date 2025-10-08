@@ -1,5 +1,22 @@
 
+/* Estilos generales responsivos */
 @media (max-width: 768px) {
+    .navegacion-principal {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .navegacion-principal a {
+        width: 100%;
+        padding: 1.5rem;
+        border-bottom: 1px solid rgba(177, 140, 84, 0.2);
+        font-size: 1.8rem;
+    }
+
+    .navegacion-principal a:last-child {
+        border-bottom: none;
+    }
+
     .obras {
         grid-template-columns: 1fr;
         gap: 3rem;
